@@ -6,7 +6,7 @@ var docsHandControllers = angular.module('docsHandControllers', []);
 
 docsHandControllers.controller('FilmListCtrl', ['$scope', 'Film',
   function($scope, Film) {
-    //$scope.films = Film.query();
+    $scope.films = Film.query();
     //$scope.orderProp = 'age';
   }]);
 

@@ -1,0 +1,23 @@
+{
+"film": "A Thousand Little Cuts",
+"chapters": [
+{
+    "id": "thousand-cuts-1",
+    "num": 1,
+    "name": "Ch 1 Name", 
+    "text": "Chapter one text would go here.Chapter one text would go here.Chapter one text would go here.", 
+    "images": [
+        "img/phones/dell-streak-7.0.jpg"
+        ]
+    }, 
+{
+    "id": "thousand-cuts-2",
+    "num": 2,
+    "name": "Ch 2 Name", 
+    "text": "Chapter two text would go here.Chapter two text would go here.Chapter two text would go here.", 
+    "images": [
+        "img/phones/dell-streak-7.0.jpg"
+        ]
+    }
+]
+}
