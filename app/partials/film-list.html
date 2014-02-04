@@ -1,0 +1,22 @@
+<div class ="wrapper">
+  <div class="fullscreen">
+      <!--Search: <input ng-model="query">
+      Sort by:
+      <select ng-model="orderProp">
+        <option value="name">Alphabetical</option>
+        <option value="age">Newest</option>
+      </select>-->
+
+      <!--Body content-->
+
+      <ul class="films">
+        <!--<li ng-repeat="film in films | filter:query | orderBy:orderProp">-->
+        <li ng-repeat="film in films">
+          <a href="#/films/{{film.id}}" class="thumb"><img ng-src="{{film.imageUrl}}"></a>
+          <a href="#/films/{{film.id}}">{{film.name}}</a>
+          <!--<p>{{film.about}}</p>-->
+        </li>
+      </ul>
+
+  </div>
+</div>

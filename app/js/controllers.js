@@ -4,16 +4,16 @@
 
 var docsHandControllers = angular.module('docsHandControllers', []);
 
-docsHandControllers.controller('PhoneListCtrl', ['$scope', 'Phone',
-  function($scope, Phone) {
-    $scope.phones = Phone.query();
-    $scope.orderProp = 'age';
+docsHandControllers.controller('FilmListCtrl', ['$scope', 'Film',
+  function($scope, Film) {
+    //$scope.films = Film.query();
+    //$scope.orderProp = 'age';
   }]);
 
-docsHandControllers.controller('PhoneDetailCtrl', ['$scope', '$routeParams', 'Phone',
-  function($scope, $routeParams, Phone) {
-    $scope.phone = Phone.get({phoneId: $routeParams.phoneId}, function(phone) {
-      $scope.mainImageUrl = phone.images[0];
+docsHandControllers.controller('FilmDetailCtrl', ['$scope', '$routeParams', 'Film',
+  function($scope, $routeParams, Film) {
+    $scope.films = Film.get({filmId: $routeParams.filmId}, function(film) {
+      $scope.mainImageUrl = film.images[0];
     });
 
     $scope.setImage = function(imageUrl) {

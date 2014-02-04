@@ -4,9 +4,9 @@
 
 var docsHandServices = angular.module('docsHandServices', ['ngResource']);
 
-docsHandServices.factory('Phone', ['$resource',
+docsHandServices.factory('Film', ['$resource',
   function($resource){
-    return $resource('phones/:phoneId.json', {}, {
-      query: {method:'GET', params:{phoneId:'phones'}, isArray:true}
+    return $resource('films/:filmId.json', {}, {
+      query: {method:'GET', params:{filmId:'films'}, isArray:true}
     });
   }]);
