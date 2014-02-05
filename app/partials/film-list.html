@@ -1,22 +1,41 @@
 <div class ="wrapper">
   <div class="fullscreen">
-      <!--Search: <input ng-model="query">
-      Sort by:
-      <select ng-model="orderProp">
-        <option value="name">Alphabetical</option>
-        <option value="age">Newest</option>
-      </select>-->
 
-      <!--Body content-->
-
-      <ul class="films">
-        <!--<li ng-repeat="film in films | filter:query | orderBy:orderProp">-->
+      <!--<ul class="films">
+        <li ng-repeat="film in films | filter:query | orderBy:orderProp">
         <li ng-repeat="film in films">
           <a href="#/films/{{film.id}}" class="thumb"><img ng-src="{{film.imageUrl}}"></a>
           <a href="#/films/{{film.id}}">{{film.name}}</a>
-          <!--<p>{{film.about}}</p>-->
+	  <p>{{film.text}}</p>
         </li>
-      </ul>
+      </ul>-->
+
+<!-- this needs to move to the detail page
+     needs animations -- check on the animations.css file and how that is linked to ng-view - was transitioning when enabled
+     need to add arrow for sliding
+     enable touch-->      
+      
+<div ng-init="films.selected='thousand-cuts-1'">
+      <div class="btn-group films" style="display: block; text-align: center; margin-bottom: 10px">
+	<span ng-repeat="film in films">
+          <button ng-click="films.selected=film.id" class="btn btn-primary">{{film.num}}</button>
+        </span>
+      </div>
+
+      <div class="well" style="height: 170px;">
+	<div ng-switch="chapter">
+          <div class="films">
+	    <div class="animate" ng-repeat="film in films">
+                <div ng-if="films.selected == film.id">
+		    <h2>{{film.name}}</h2>
+		    <p>{{film.text}}</p>
+		</div>
+	    </div>
+          </div>  
+        </div>  
+      </div>
+</div>
+
 
   </div>
 </div>
