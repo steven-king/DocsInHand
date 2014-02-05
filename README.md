@@ -1,0 +1,4 @@
+docsinhandapp
+=============
+
+adding phonegap app
