@@ -1,4 +1,4 @@
 docsinhandapp
 =============
 
-adding phonegap app
+adding phonegap app another project.
