@@ -26,7 +26,8 @@ var app = {
     },
 
     receivedFrequency: function(frequency) {
-        var message = "<br/>Received callback for frequency " + frequency + "Hz";
-        document.getElementById( "feedback" ).innerHTML += message;
+        var message = "Frequency " + frequency + "Hz Detected";
+        document.getElementById( "feedback" ).innerHTML = message;
+        console.log(message);
     }
 };
