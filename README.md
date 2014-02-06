@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Docs in Hand
 
 ## Second Screen Application
