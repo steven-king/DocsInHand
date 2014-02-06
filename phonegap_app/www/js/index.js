@@ -15,6 +15,7 @@ var app = {
     onDeviceReady: function() {
         console.log('deviceready');
         
+        
         var callback = app.receivedFrequency;
         window.pitchDetection.registerFrequency( "18000", callback );
         window.pitchDetection.registerFrequency( "18200", callback );
@@ -26,7 +27,27 @@ var app = {
     },
 
     receivedFrequency: function(frequency) {
-        var message = "Frequency " + frequency + "Hz Detected";
+        var chapter;
+        if (frequency == 18000) {
+            chapter = 1;
+        }
+        if (frequency == 18200) {
+            chapter = 2;
+        }
+        if (frequency == 18400) {
+            chapter = 3;
+        }
+        if (frequency == 18600) {
+            chapter = 4;
+        }
+        if (frequency == 18800) {
+            chapter = 5;
+        }
+        if (frequency == 19000) {
+            chapter = 6;
+        }
+        
+        var message = "Frequency " + frequency + "Hz Detected.</br><h3>Chapter " + chapter + "</h2>";
         document.getElementById( "feedback" ).innerHTML = message;
         console.log(message);
     }
