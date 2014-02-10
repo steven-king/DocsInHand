@@ -50,5 +50,7 @@ var app = {
         var message = "Frequency " + frequency + "Hz Detected.</br><h3>Chapter " + chapter + "</h2>";
         document.getElementById( "feedback" ).innerHTML = message;
         console.log(message);
+        
+        //Use $watch based on a DOM event
     }
 };
