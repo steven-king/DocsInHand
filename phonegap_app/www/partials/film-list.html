@@ -14,6 +14,7 @@
      needs animations -- check on the animations.css file and how that is linked to ng-view - was transitioning when enabled
      need to add arrow for sliding
      enable touch-->      
+<div id="feedback">Listening...Waiting for Film to start...</div>
       
 <div ng-init="films.selected=1"><!-- "films.selected='1'" renders as a string and clicking the next buttons just appends a 1 so it becomes 11 instead of 2-->
       <div class="btn-group films" style="display: block; text-align: center; margin-bottom: 10px;">
@@ -24,12 +25,12 @@
 	<button ng-disabled="films.selected >= films.length" ng-click="films.selected=films.selected+1" class="btn btn-primary">Next {{films.selected}}</button>
       </div>
 
-      <div class="well" style="height: 170px;">
+      <div class="well" style="height: 100px;">
 	<div ng-switch="chapter">
           <div class="films">
 	    <div class="animate" ng-repeat="film in films">
                 <div ng-if="films.selected == film.num">
-		    <h2>{{film.name}}</h2>
+		    <p>{{film.name}}</p>
 		    <p>{{film.text}}</p>
 		</div>
 	    </div>
@@ -37,6 +38,12 @@
         </div>  
       </div>
 </div>
+
+
+
+Enter slide to go to: <input type="text" class="form-control" ng-model="slideNum" style="max-width: 200px; display:inline;"></input>
+<button ng-click="films.selected=slideNum" class="btn btn-primary" style="display: inline;">Go to slide {{slideNum}}</button>
+
 <hr>
 
 

@@ -11,6 +11,15 @@ docsHandControllers.controller('FilmListCtrl', ['$scope', 'Film',
     //$scope.orderProp = 'age';
     //Use $watch based on a DOM event $watchCollection(obj, listener)
     $scope.currentPage = 0;
+    /*$.getScript("js/index.js", function(){
+        
+           alert("Script loaded and executed.");
+           // Here you can use anything you defined in the loaded script
+	  
+        });
+    $scope.change = function() {
+    $scope.counter++;
+  };*/
   }]);
 
 
