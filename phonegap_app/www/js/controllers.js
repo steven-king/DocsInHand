@@ -4,25 +4,17 @@
 
 var docsHandControllers = angular.module('docsHandControllers', []);
 
+
 docsHandControllers.controller('FilmListCtrl', ['$scope', 'Film',
   function($scope, Film) {
     $scope.films = Film.query();
     //$scope.orderProp = 'age';
     //Use $watch based on a DOM event $watchCollection(obj, listener)
-    
     $scope.currentPage = 0;
-    //Need to allow Cordova to set the current page 
-    $scope.pageSize = 1;
   }]);
 
-//We already have a limitTo filter built-in to angular,
-//let's make a startFrom filter
-docsHandControllers.filter('startFrom', function() {
-    return function(input, start) {
-        start = +start; //parse to int
-        return input.slice(start);
-    }
-});
+
+
 
 docsHandControllers.controller('FilmDetailCtrl', ['$scope', '$routeParams', 'Film',
   function($scope, $routeParams, Film) {

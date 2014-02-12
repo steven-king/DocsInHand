@@ -16,5 +16,14 @@
     "images": [
         "img/phones/dell-streak-7.0.jpg"
         ]
+    },
+    {
+    "id": "thousand-cuts-3",
+    "num": 3,
+    "name": "Ch 3 Name", 
+    "text": "Chapter three text would go here.Chapter two text would go here.Chapter three text would go here.", 
+    "images": [
+        "img/phones/dell-streak-7.0.jpg"
+        ]
     }
 ]
